@@ -1,4 +1,4 @@
-# :christmas_tree: Advent of Code 2019 - Thomas Kendrick :gift:
+# :christmas_tree: Advent of Code 2020 - Thomas Kendrick :gift:
 
 My attempt at Advent of Code 2019 in Rust. Thanks to [Grégory Obanos](https://github.com/gobanos) for the [cargo-aoc](https://github.com/gobanos/cargo-aoc) crate used to make running and benchmarking solutions straightforward so I can focus on the implementation.
 
