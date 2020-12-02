@@ -9,7 +9,7 @@ pub fn input_generator(input: &str) -> Vec<usize> {
 fn solve_part_1(input: &Vec<usize>) -> usize {
     for x in input {
         for y in input {
-            if (x + y == 2020){
+            if x + y == 2020 {
                 return x * y;
             }
         }
@@ -23,7 +23,7 @@ fn solve_part_2(input: &Vec<usize>) -> usize {
     for x in input {
         for y in input {
             for z in input {
-                if (x + y + z == 2020){
+                if x + y + z == 2020 {
                     return x * y * z;
                 }
             }
