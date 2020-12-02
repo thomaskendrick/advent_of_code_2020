@@ -7,8 +7,12 @@ pub fn input_generator(input: &str) -> Vec<usize> {
 #[aoc(day1, part1)]
 
 fn solve_part_1(input: &Vec<usize>) -> usize {
-    for x in input {
-        for y in input {
+
+    let mut input : Vec<usize> = input.clone();
+    input.sort();
+
+    for x in &input {
+        for y in &input {
             if x + y == 2020 {
                 return x * y;
             }
