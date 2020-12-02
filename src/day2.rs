@@ -31,11 +31,29 @@ fn solve_part_1(input: &Vec<Password>) -> usize {
     let mut valid_passwords = 0;
 
     for pwd in input {
-
         let occurences = pwd.password.matches(pwd.policy_char).count();
-        if (occurences >= pwd.repeat_range.0 && occurences<= pwd.repeat_range.1){
+        if occurences >= pwd.repeat_range.0 && occurences <= pwd.repeat_range.1 {
             valid_passwords += 1;
         }
     }
-    return valid_passwords
+    return valid_passwords;
+}
+
+#[aoc(day2, part2)]
+
+fn solve_part_2(input: &Vec<Password>) -> usize {
+    let input = input.clone();
+    let mut valid_passwords = 0;
+
+    for pwd in input {
+        let first_char_valid =
+            pwd.policy_char == pwd.password.chars().collect::<Vec<char>>()[pwd.repeat_range.0 - 1];
+        let second_char_valid =
+            pwd.policy_char == pwd.password.chars().collect::<Vec<char>>()[pwd.repeat_range.1 - 1];
+
+        if first_char_valid ^ second_char_valid {
+            valid_passwords += 1;
+        }
+    }
+    return valid_passwords;
 }
