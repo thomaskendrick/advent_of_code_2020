@@ -24,9 +24,13 @@ fn solve_part_1(input: &Vec<usize>) -> usize {
 #[aoc(day1, part2)]
 
 fn solve_part_2(input: &Vec<usize>) -> usize {
-    for x in input {
-        for y in input {
-            for z in input {
+
+    let mut input : Vec<usize> = input.clone();
+    input.sort();
+
+    for x in &input {
+        for y in &input {
+            for z in &input {
                 if x + y + z == 2020 {
                     return x * y * z;
                 }
