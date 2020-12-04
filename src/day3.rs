@@ -50,9 +50,6 @@ pub fn input_generator(input: &str) -> SkiSlope {
 #[aoc(day3, part1)]
 
 fn solve_part_1(input: &SkiSlope) -> usize {
-    let x_delta = 3;
-    let y_delta = 1;
-
     check_slope(input, 3, 1)
 }
 #[aoc(day3, part2)]
